@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "api/postNews.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+        { "src": "/api/postNews", "dest": "/api/postNews.js" }
+    ],
+    "crons": [
+        { "path": "/api/postNews", "schedule": "0 8,20 * * *" }
+    ]
+}
